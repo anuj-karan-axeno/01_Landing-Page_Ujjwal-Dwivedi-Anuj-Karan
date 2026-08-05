@@ -1,103 +1,66 @@
 export function createNavbar() {
 
-    const navbar = document.createElement('header');
+    const navbar = document.createElement("header");
 
-    navbar.classList.add('navbar');
+    navbar.classList.add("navbar");
 
     navbar.innerHTML = `
-
         <div class="container nav-content">
 
-            <a
-                href="../index.html"
-                class="logo"
-            >
+            <a href="../index.html" class="logo">
                 MyStore
             </a>
 
-
             <nav class="nav-links">
-
-                <a href="../index.html">
-                    Home
-                </a>
-
-                <a href="../htmlpages/products.html">
-                    Products
-                </a>
-
-                <a href="../htmlpages/contact.html">
-                    Contact
-                </a>
+                <a href="../index.html">Home</a>
+                <a href="../htmlpages/products.html">Products</a>
+                <a href="../htmlpages/contact.html">Contact</a>
             </nav>
 
-            <div class="theme-switcher" role="radiogroup" aria-label="Theme selection">
+            <div class="theme-switcher">
 
-                <label class="theme-option">
+                <label>
                     <input type="radio" name="theme" value="light">
-                    <span>Light</span>
+                    Light
                 </label>
 
-                <label class="theme-option">
+                <label>
                     <input type="radio" name="theme" value="dark">
-                    <span>Dark</span>
+                    Dark
                 </label>
 
             </div>
 
         </div>
-
     `;
 
     const themeOptions = navbar.querySelectorAll('input[name="theme"]');
-    const THEME_STORAGE_KEY = 'mystore-theme';
 
-    function applyTheme(theme) {
+    // Get saved theme or use dark by default
+    const savedTheme = localStorage.getItem("theme") || "dark";
 
-        const isDark = theme === 'dark';
-
-        document.body.classList.toggle('dark-theme', isDark);
-
-        themeOptions.forEach((radio) => {
-
-            radio.checked = radio.value === theme;
-
-        });
-
+    // Apply theme
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-theme");
     }
 
-    try {
-
-        const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
-
-        applyTheme(savedTheme);
-
-    } catch (error) {
-
-        applyTheme('light');
-
-    }
-
+    // Select correct radio button
     themeOptions.forEach((radio) => {
+        if (radio.value === savedTheme) {
+            radio.checked = true;
+        }
 
-        radio.addEventListener('change', (event) => {
+        radio.addEventListener("change", () => {
 
-            const nextTheme = event.target.value;
+            localStorage.setItem("theme", radio.value);
 
-            try {
-
-                localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
-
-            } catch (error) {
-
-                console.warn('Theme preference could not be saved:', error);
-
+            if (radio.value === "dark") {
+                document.body.classList.add("dark-theme");
+            } else {
+                document.body.classList.remove("dark-theme");
             }
 
-            applyTheme(nextTheme);
-
         });
-
     });
 
     return navbar;
