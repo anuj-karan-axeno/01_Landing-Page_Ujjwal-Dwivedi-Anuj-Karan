@@ -115,8 +115,5 @@ These are the target numbers the homepage and page structure are being shaped to
 
 ## Live deployment link (GitHub Pages)
 
-Once the project is published to GitHub Pages, the final live link will usually follow this pattern:
+https://anuj-karan-axeno.github.io/01_Landing-Page_Ujjwal-Dwivedi-Anuj-Karan-/
 
-<!-- https://<your-github-username>.github.io/<repository-name>/ -->
-
-Replace the placeholder values with your actual GitHub username and repository name before sharing the live link.
