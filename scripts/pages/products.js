@@ -20,25 +20,53 @@ const errorElement = document.getElementById('error');
 
 const searchInput = document.getElementById('product-search');
 
+const sortSelect = document.getElementById('sort-products');
+
 
 let allProducts = [];
 
 let currentSearch = '';
 
+let currentSort = 'default';
 
 
+function getFilteredProducts(searchTerm) {
 
-function searchProducts(searchTerm) {
-
-  const filteredProducts = allProducts.filter((product) => {
+  return allProducts.filter((product) => {
 
     return product.title
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
 
   });
+}
 
-  renderProducts(filteredProducts);
+
+function sortProducts(products) {
+
+  const sortedProducts = [...products];
+
+  if (currentSort === 'low-high') {
+
+    sortedProducts.sort((a, b) => a.price - b.price);
+
+  } else if (currentSort === 'high-low') {
+
+    sortedProducts.sort((a, b) => b.price - a.price);
+
+  }
+
+  return sortedProducts;
+}
+
+
+function searchProducts(searchTerm) {
+
+  currentSearch = searchTerm;
+
+  const filteredProducts = getFilteredProducts(searchTerm);
+
+  renderProducts(sortProducts(filteredProducts));
 }
 
 
@@ -52,6 +80,17 @@ searchInput.addEventListener('input', (event) => {
 });
 
 
+sortSelect.addEventListener('change', (event) => {
+
+  currentSort = event.target.value;
+
+  const filteredProducts = getFilteredProducts(currentSearch);
+
+  renderProducts(sortProducts(filteredProducts));
+
+});
+
+
 async function initProductsPage() {
 
   try {
@@ -60,7 +99,7 @@ async function initProductsPage() {
 
     allProducts = products;
 
-    renderProducts(allProducts);
+    renderProducts(sortProducts(getFilteredProducts(currentSearch)));
 
   } catch (error) {
 
