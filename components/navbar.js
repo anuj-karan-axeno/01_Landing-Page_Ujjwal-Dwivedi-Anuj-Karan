@@ -13,9 +13,9 @@ export function createNavbar() {
             </a>
 
             <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="./htmlpages/products.html">Products</a>
-                <a href="./htmlpages/contact.html">Contact</a>
+                <a href="../index.html">Home</a>
+                <a href="../htmlPages/products.html">Products</a>
+                <a href="../htmlPages/contact.html">Contact</a>
             </nav>
 
             <div class="theme-switcher">
