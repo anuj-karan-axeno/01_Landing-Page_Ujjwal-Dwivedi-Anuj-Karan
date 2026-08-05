@@ -1,0 +1,310 @@
+body.dark-theme .hero {
+    background-color: #151515;
+}
+
+body.dark-theme .hero-label {
+    color: #8dff8d;
+}
+
+body.dark-theme .hero-text h1,
+body.dark-theme .section-heading h2,
+body.dark-theme .product-title,
+body.dark-theme .testimonial-card h3 {
+    color: #f5f5f5;
+}
+
+body.dark-theme .hero-text p,
+body.dark-theme .section-heading p,
+body.dark-theme .product-description,
+body.dark-theme .testimonial-text,
+body.dark-theme .testimonial-card span {
+    color: #d0d0d0;
+}
+
+body.dark-theme .hero-button {
+    color: #111;
+    background-color: #f5f5f5;
+}
+
+body.dark-theme .product-card,
+body.dark-theme .testimonial-card {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-theme .product-price {
+    color: #8dff8d;
+}
+
+body.dark-theme .showcase,
+body.dark-theme .testimonials {
+    background-color: #111;
+}
+
+body.dark-theme .product-category {
+    color: #b8b8b8;
+}
+
+.hero {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.hero-label {
+    margin-bottom: 15px;
+
+    color: green;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.hero-text h1 {
+    max-width: 600px;
+
+    margin-bottom: 20px;
+
+    font-size:
+        clamp(36px, 5vw, 64px);
+
+    line-height: 1.1;
+
+}
+
+.hero-text p {
+    max-width: 500px;
+
+    margin-bottom: 30px;
+
+    line-height: 1.6;
+
+    color: #666;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    color: white;
+
+    background-color: #111;
+
+    border-radius: 5px;
+}
+
+.hero-image img {
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+
+.showcase,
+.testimonials {
+    padding: 80px 0;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 10px;
+
+    font-size: 32px;
+}
+
+.section-heading p {
+    color: #666;
+}
+
+
+
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,
+            minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+
+.product-card {
+    overflow: hidden;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-title {
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+.product-price {
+    color: green;
+
+    font-weight: bold;
+}
+
+
+
+
+
+/* Loading */
+#loading {
+    display: block;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 18px;
+    color: #111;
+    background: transparent;
+}
+
+/* Error */
+#error {
+    display: none;
+    text-align: center;
+    color: red;
+    margin: 20px 0;
+}
+
+.testimonials {
+    background-color: #f5f5f5;
+}
+
+.testimonial-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,
+            minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.testimonial-card {
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-text {
+    margin-bottom: 20px;
+
+    line-height: 1.6;
+
+    color: #555;
+}
+
+.testimonial-card h3 {
+    margin-bottom: 5px;
+
+    font-size: 18px;
+}
+
+.testimonial-card span {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .showcase,
+    .testimonials {
+        padding: 60px 0;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+
+    .showcase,
+    .testimonials {
+        padding: 50px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+}
