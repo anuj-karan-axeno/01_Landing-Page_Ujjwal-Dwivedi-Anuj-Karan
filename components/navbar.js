@@ -9,7 +9,7 @@ export function createNavbar() {
         <div class="container nav-content">
 
             <a
-                href="index.html"
+                href="../index.html"
                 class="logo"
             >
                 MyStore
@@ -18,7 +18,7 @@ export function createNavbar() {
 
             <nav class="nav-links">
 
-                <a href="index.html">
+                <a href="../index.html">
                     Home
                 </a>
 
