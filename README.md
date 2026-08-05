@@ -36,7 +36,6 @@ components/
 htmlPages/
     404.html
     contact.html
-    home.html
     products.html
 scripts/
     pages/
@@ -53,6 +52,7 @@ styles/
     home.css
     products.css
 README.md
+index.html
 ```
 
 ## Technologies used
@@ -113,7 +113,10 @@ These are the target numbers the homepage and page structure are being shaped to
 - Improve theme styling consistency across all pages
 - Add stronger SEO metadata and Open Graph tags
 
+## Github URL
+
+https://github.com/anuj-karan-axeno/01_Landing-Page_Ujjwal-Dwivedi-Anuj-Karan
+
 ## Live deployment link (GitHub Pages)
 
-https://anuj-karan-axeno.github.io/01_Landing-Page_Ujjwal-Dwivedi-Anuj-Karan-/
-
+https://anuj-karan-axeno.github.io/01_Landing-Page_Ujjwal-Dwivedi-Anuj-Karan/
