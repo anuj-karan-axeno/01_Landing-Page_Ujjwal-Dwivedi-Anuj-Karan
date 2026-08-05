@@ -1,3 +1,4 @@
+
 export function createNavbar() {
 
     const navbar = document.createElement("header");
@@ -7,14 +8,14 @@ export function createNavbar() {
     navbar.innerHTML = `
         <div class="container nav-content">
 
-            <a href="../index.html" class="logo">
+            <a href="index.html" class="logo">
                 MyStore
             </a>
 
             <nav class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="../htmlpages/products.html">Products</a>
-                <a href="../htmlpages/contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="./htmlpages/products.html">Products</a>
+                <a href="./htmlpages/contact.html">Contact</a>
             </nav>
 
             <div class="theme-switcher">

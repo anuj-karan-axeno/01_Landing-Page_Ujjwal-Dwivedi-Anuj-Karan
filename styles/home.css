@@ -216,9 +216,7 @@ body.dark-theme .product-category {
 .testimonial-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(auto-fit,
-            minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
     gap: 20px;
 }
@@ -230,8 +228,7 @@ body.dark-theme .product-category {
 
     border-radius: 8px;
 
-    box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .testimonial-text {

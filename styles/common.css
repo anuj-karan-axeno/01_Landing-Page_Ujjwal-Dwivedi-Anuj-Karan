@@ -101,7 +101,7 @@ a {
             calc(100% - 40px));
 
     margin: 0 auto;
-    
+
 }
 
 
@@ -169,8 +169,7 @@ a {
 }
 
 .nav-links a {
-    transition:
-        color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 
@@ -243,8 +242,7 @@ a {
 @media (max-width: 500px) {
 
     .container {
-        width:
-            calc(100% - 30px);
+        width: calc(100% - 30px);
     }
 
 
