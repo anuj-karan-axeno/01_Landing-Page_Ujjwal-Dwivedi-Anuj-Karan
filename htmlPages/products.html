@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products</title>
+    
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/products.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <main class="container">
+
+        <header class="products-header">
+
+            <div class="products-heading">
+
+                <p class="eyebrow">
+                    Explore our collection
+                </p>
+
+                <h1>
+                    Our Products
+                </h1>
+
+                <p class="products-subtitle">
+                    Discover our latest products designed
+                    for style, comfort, and everyday use.
+                </p>
+
+            </div>
+
+
+            <div class="search-container">
+
+                <label for="product-search">
+                    Search products
+                </label>
+
+                <input type="search" id="product-search" placeholder="Search products..." autocomplete="off">
+
+            </div>
+
+        </header>
+
+
+        <div id="loading" class="loading">
+            Loading products...
+        </div>
+
+
+        <div id="error" class="error"></div>
+
+
+        <section id="products-container" class="products-grid" aria-live="polite">
+        </section>
+
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script type="module" src="../scripts/pages/products.js"></script>
+
+</body>
+
+</html>
