@@ -88,6 +88,7 @@ sortSelect.addEventListener('change', (event) => {
 
   renderProducts(sortProducts(filteredProducts));
 
+
 });
 
 
@@ -99,7 +100,7 @@ async function initProductsPage() {
 
     allProducts = products;
 
-    renderProducts(sortProducts(getFilteredProducts(currentSearch)));
+    renderProducts(allProducts);
 
   } catch (error) {
 
