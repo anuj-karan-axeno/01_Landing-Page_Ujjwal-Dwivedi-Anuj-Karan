@@ -1,6 +1,8 @@
 
 export function createNavbar() {
-
+      // <a href="./index.html">Home</a>
+                // <a href="./htmlPages/products.html">Products</a>
+                // <a href="./htmlPages/contact.html">Contact</a>
     const navbar = document.createElement("header");
 
     navbar.classList.add("navbar");
@@ -13,9 +15,13 @@ export function createNavbar() {
             </a>
 
             <nav class="nav-links">
-                <a href="./index.html">Home</a>
-                <a href="./htmlPages/products.html">Products</a>
-                <a href="./htmlPages/contact.html">Contact</a>
+          
+                               
+               <a href="/index.html">Home</a>
+
+               <a href="/htmlPages/products.html">Products</a>
+
+               <a href="/htmlPages/contact.html">Contact</a>
             </nav>
 
             <div class="theme-switcher">
